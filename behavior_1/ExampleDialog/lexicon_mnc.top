@@ -1,0 +1,13 @@
+topic: ~lexicon_mnc ()
+language:mnc
+
+concept:(vct) ，\vct=130\\rspd=110\
+concept:(pause) ，\pau=500\
+concept:(yes) [OK 好 要 是 對 想 有 厚 是呀 是阿 好啊 好阿 好唷 對阿 對啊 對呀 黑阿 黑呀 黑啊 可以 還好 喜歡 ]
+concept:(no) [No 不 否 不要 不想 不好 不是 不想 不對 不可以 不喜歡 "不用{了}" "不用{啊}"]
+concept:(love) [想你 愛你 喜歡你 很愛你]
+concept:(hello) [你好 早安 午安 晚安 嗨 哈囉 三碗低咖 鞛糾 hello hi "good morning" "good afternoon" "good night"]
+concept:(bye) ["good bye" "see you next" 再見 掰掰 下次見]
+concept:(praise) [可愛 很可愛 超可愛 帥 很帥 超帥 帥氣 酷 很酷 超酷 美 很美 超美 美麗 正 很正 超正 棒 很棒 超棒 厲害 很厲害 超厲害]
+concept:(Aux) [了 啊 阿 喔 唷 吼 耶]
+concept:(who) [你是誰 "who are you" 你叫什麼 你的名字是]

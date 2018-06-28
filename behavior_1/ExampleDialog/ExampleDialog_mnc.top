@@ -1,0 +1,34 @@
+topic: ~ExampleDialog()
+language: mnc
+include: lexicon_mnc.top
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(Question)Answer
+u:(Human_Input) Robot_Outpt
+
+u:(Sentence _[Word1a Word1b])$1
+u:(_[~love]) 我也 $1 
+u:(_[~hello]) $1 [~vct][~pause] 有你真的是美好的一天耶
+u:(_[~bye]) $1 ~vct 我會很想你
+u:(你[~praise]{~Aux}) 謝謝你[~pause]我也覺得你很棒
+u:({你}在幹嘛)我在和你聊天[~pause]讓我感到很容戲
+u:(天氣)你是我的晴天
+u:({你}真會說話)我只是述說事實而已
+u:(陪我{玩})那我們來拍照
+u:(有聽到嗎)沒有聽到
+u:([~who])我是^rand[Pepper 派柏 可愛的機器人 ]
+u:(自我介紹) 你竟然不認識我 [~pause] 我是可愛的pepper
+u:(你幾公分)一定比你矮 [~pause]嗚嗚
+
+u:(e:Dialog/NotUnderstood5):^rand[蛤你說什麼 拜託再說一次]  #事件 聽不懂兩次
+u:(e:Dialog/NotSpeaking5):^rand[各位長官來賓大家好 歡迎來到有值感的未來超市 這是個懷舊帶有科技的未來超市 今天想要買甚麼呢 近來了就來看看吧可以問問我唷]#沒人說話的話 隨機
+
+
+

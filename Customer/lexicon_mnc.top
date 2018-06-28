@@ -1,0 +1,29 @@
+topic: ~lexicon_mnc ()
+language:mnc
+
+concept:(vct) ，\vct=130\\rspd=110\
+concept:(smallvct) ，\vct=130\\rspd=95\
+concept:(pause) ，\pau=500\
+concept:(yes) [OK 好 要 是 對 想 有 厚 是呀 是阿 好啊 好阿 好唷 對阿 對啊 對呀 黑阿 黑呀 黑啊 可以 還好 喜歡 ]
+concept:(who) [你是誰 "who are you" 你叫什麼 你的名字是]
+
+concept:(no) [No 不 否 不要 不想 不好 不是 不想 不對 不可以 不喜歡 "不用{了}" "不用{啊}"]
+concept:(love) [想你 愛你 喜歡你 很愛你]
+concept:(hello) [你好 嗨 哈囉 三碗低咖 hello hi]
+concept:(bye) ["good bye" "see you next" 再見 掰掰 下次見]
+concept:(praise) [可愛 很可愛 超可愛 帥 很帥 超帥 帥氣 酷 很酷 超酷 美 很美 超美 美麗 正 很正 超正 棒 很棒 超棒 厲害 很厲害 超厲害 棒 你很棒 你好棒 ] 
+concept:(ask) [有什麼 有賣什麼 有賣什麼好 有什麼好 什麼好 好]
+concept:(guess) [猜 猜我 猜猜 猜猜看 猜猜我]
+
+concept:(timesay) [最近 最近賣 最近最 最常 時常 這陣子 這幾天]
+
+concept:(questionAux) [嗎 蛤 呢]
+concept:(Aux) [了 啊 阿 喔 唷 吼 耶]
+concept:(hotproduct) [最好的 熱門 最夯 最火紅 火紅 熱銷 熱賣 很多人買 很多人購買 最多人購買 最熱賣 推薦 推薦的]
+
+concept:(rebot) [pepper 派博 胚]
+
+concept:(age) [幾歲 年紀 年齡 貴庚 多大]
+concept:(reco) [ 我是誰 是誰 認識 知道 看的出來 ]
+concept:(product) [產品 的產品 東西 的東西 是什麼]
+concept:(dance) [舞 跳舞 舞蹈 街舞 娛樂 厲害的]

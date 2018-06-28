@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<script src="/libs/qimessaging/2/qimessaging.js"></script> 
+	<script>
+			var session;
+			QiSession( function (s) {
+			session = s;
+			});
+
+			function validateForm() {
+				session.service("ALMemory").then(function (ALMemory) {
+			    	ALMemory.subscriber("FrontTactilTouched").then(function (subscriber) {
+		   		 		subscriber.signal.connect(function (state) {
+		   		 			// document.write("你摸了。");
+		   		 		    document.registerform.submit();
+		   		 		});
+		  			});
+				});		
+			}
+
+	</script>
+	</head>
+
+	<body onclick="validateForm()">
+		<center><table border="10" width=300 ><td><center><font style="微軟正黑體">
+		<form action="http://192.168.1.222/RECO/inputname.php" method="GET" name="registerform">
+		<h1>人臉註冊</h1></font>
+		<br>
+		<h1>輸入完點擊旁邊再摸我的頭</h1>
+		    <label for="name">姓名：</label>
+		<input type="text" id="name" name="name">
+		<br><br><br><br>
+			<!-- style="width:500px;height:40px;font-size:20px;" -->
+
+		<input type="submit" value="送出">
+		<br>
+		
+		</center></td></table></center>
+		</form>	
+	</body>
+</html>

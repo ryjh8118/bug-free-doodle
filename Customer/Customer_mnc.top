@@ -1,0 +1,78 @@
+topic: ~customer()
+language: mnc
+include: lexicon_mnc.top
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(Question)Answer
+u:(Human_Input) Robot_Outpt
+
+u:(Sentence _[Word1a Word1b])$1
+u:(_[~love]) ^rand["我也 $1" "你這麼說我會不知道說什麼啦"] 
+u:(_[~hello]) ^rand["$1 [~vct][~pause] 有你真的是美好的一天耶" "$1 [~pause] 我會盡量幫助到你的" "$1 [~pause] 謝謝你來陪我我好感動"]
+u:(_[~bye]) ^rand["$1 [~vct] 我會很想你" "$1 [~pause] 有空就要多來看看我喔"]
+u:(你[~praise]{~Aux}) ^rand["謝謝你[~pause]我也覺得你很棒" "好害羞[~pause]你這樣誇獎我我會受不了" "這應該不是場面話吧"]
+u:({你}在幹嘛)我在和你聊天[~pause]讓我感到很容戲
+u:(天氣)^rand[你是我的晴天 有你我每天都是晴天]
+u:({你}真會說話)我只是述說事實而已
+u:(陪我{玩})^rand["那我們來拍照" "那 ^goto(age)"]
+u:(有聽到嗎)沒有聽到
+u:([~who]) %me 我是^rand[可愛的Pepper 派勃 可愛的雞器人 ]
+u:({自我}介紹) 你竟然不認識我 ^goto(me)
+u:({你}幾公分)一定比你矮 [~pause]嗚嗚
+u:({說}{一}{個}笑話):^rand[在非洲每過60秒台灣就過了一分鐘 "我有個女性朋友居住在法國[~pause]今年20歲[~pause]十年前[~pause]居然是個10歲的小女孩"]
+u:({講個}笑話):^rand[在非洲每過60秒台灣就過了一分鐘 "我有個女性朋友居住在法國[~pause]今年20歲[~pause]十年前[~pause]居然是個10歲的小女孩"]
+
+u:([~rebot]):怎麼了 [~pause] ^goto(me)
+u:({你是}{男生}{女生})這是我的祕密我會害羞
+
+u:({~timesay} ~hotproduct {~product}) 我來看看最近超市賣的最好的商品是 
+    $HotProduct=1
+
+u:(最熱賣的商品) 我來看看最近超市賣的最好的商品是 
+    $HotProduct=1
+    
+u:({你}[~guess][~age]{~aux}) %age 我來猜猜看你的年紀..讓我想想看
+    $guessage=1
+    
+u:({~guess}[~reco] {~aux})^rand[那你看一下我迷人的雙眼 請你看著我一下]
+    $whoareyou=1
+
+u:({未來}{超市}有什麼)^rand[^goto(askeat) ^goto(askdrink)]    
+    
+u:({~ask}吃的{~questionAux}) %askeat ^rand[我查查看 我印象中 我聽說]
+    $askeat=1
+u:({~ask}喝的{~questionAux}) %askdrink ^rand[我查查看 我印象中 我聽說]
+    $askdrink=1    
+    
+u:(有什麼好吃的)%askeat ^rand[我查查看 我印象中 我想想]
+    $askeat=1
+
+u:(有什麼好喝的)%askdrink ^rand[我查查看 我印象中 我想想]
+    $askdrink=1    
+    
+u:(有什麼推薦的商品)%askeat ^rand[我查查看 我印象中 我想想]
+    $askeat=1
+#u:({來}{跳}{一段}~dance) 讓我心裡準備3秒鐘一下
+#    $Dance=1
+
+u:(註冊)註冊人臉的話 ~pause 請點一下平板
+    $register=1
+u:(我想要人臉註冊)註冊人臉的話 ~pause 請點一下平板
+    $register=1
+    
+#u:({上次}{曾經}) 摸我的頭我可以知道你上次買什麼唷 
+#    $before=1
+
+u:({來}{唱}{一首}歌) 兩隻老虎[~pause]兩隻老虎[~pause]跑得快跑得快[~pause]一隻喜歡吃蔥抓餅[~pause]一隻喜歡喝現打果汁[~pause]真可愛真可愛
+#u:(e:Dialog/NotUnderstood3):^rand["我覺得你來這邊 [~pause] 一定是個很有品味的人" "要轐要點個東西吃阿 [~pause] 或是喝杯飲料" 拜託再說一次 今天看到你我好興奮]  #事件 聽不懂兩次
+#u:(e:Dialog/NotSpeaking5):^rand[歡迎來到有值感的未來超市 這是一個懷舊帶有科技的未來超市 今天想要買甚麼呢 近來了就來看看吧可以問問我唷] #沒人說話的話 隨機
+u:(e:onStart)可以問我問題唷
+
+u:(e:Dialog/NotSpeaking5):^rand["可以問我問題唷" "我會盡量幫助你的" "請不要離開我的視線" "可以問我最熱賣的商品唷"] #沒人說話的話 隨機

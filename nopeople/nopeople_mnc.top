@@ -1,0 +1,14 @@
+topic: ~nopeople()
+language: mnc
+include: lexicon_mnc.top    
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(e:Dialog/NotSpeaking5):^rand[來陪我聊天呀 "不要站在我太前面[~pause]因為我的脖子會扭到" "口渴了嗎[~pause]快來看看有甚麼好喝的果汁吧" "肚子餓了嗎[~pause]快來瞧瞧超市有甚麼好吃的東西吧"] #沒人說話的話 隨機
